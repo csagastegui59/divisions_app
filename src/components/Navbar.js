@@ -2,9 +2,9 @@ import React from "react";
 import "./../stylesheets/Navbar.css";
 import { Menu, Dropdown, Button, Avatar } from 'antd';
 import { Badge } from 'antd';
-import { QuestionCircleOutlined, BellFilled, InboxOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined, BellFilled, InboxOutlined, DownOutlined } from '@ant-design/icons';
 
- const menu_modelos = (
+ const menu_models = (
   <Menu>
     <Menu.Item>
       <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/%22%3E">
@@ -18,7 +18,7 @@ import { QuestionCircleOutlined, BellFilled, InboxOutlined } from '@ant-design/i
     </Menu.Item>
   </Menu>
 );
-  const menu_seguimiento = (
+  const menu_feedback = (
   <Menu>
     <Menu.Item>
       <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/%22%3E">
@@ -49,36 +49,33 @@ const menu_user = (
   function Navbar(){
     return(
       <>
-      <div className="Navbar">
-        <div className="Navbar__logo">
-          <p className="logo">mandü</p>
+        <div className="Navbar">
+          <div className="Navbar__logo">
+            <p className="logo">mandü</p>
+          </div>
+          <Button className="Navbar__button">Dashboard</Button>
+          <Button className="Navbar__button">Organización</Button>
+          <Dropdown.Button overlay={menu_models} placement="bottomCenter" icon={<DownOutlined /> }>
+            Modelos
+          </Dropdown.Button>
+          <Dropdown.Button overlay={menu_feedback} placement="bottomCenter" icon={<DownOutlined /> }>
+            Seguimiento
+          </Dropdown.Button>
+          <InboxOutlined />
+          <QuestionCircleOutlined />
+          <a href="#">
+            <Badge count={1}>
+              <BellFilled />
+            </Badge>
+          </a>,
+          <Avatar style={{ backgroundColor: 'red', verticalAlign: 'middle' }} size="large">
+            A
+          </Avatar>
+          <Dropdown.Button overlay={menu_user} placement="bottomCenter" icon={<DownOutlined /> }>
+            Administrador
+          </Dropdown.Button>
         </div>
-        <button className="Navbar__button">Dashboard</button>
-        <button className="Navbar__button">Organización</button>
-        <Dropdown overlay={menu_modelos} placement="bottomLeft" arrow>
-        <Button className="Navbar__button">Modelos</Button>
-        </Dropdown>
-        <Dropdown overlay={menu_seguimiento} placement="bottomLeft" arrow>
-        <Button className="Navbar__button">Seguimiento</Button>
-        </Dropdown>
-
-        <InboxOutlined />
-        <QuestionCircleOutlined />
-                <a href="#">
-        <Badge count={1}>
-        <BellFilled />
-        </Badge>
-        </a>,
-
-        <Avatar style={{ backgroundColor: 'red', verticalAlign: 'middle' }} size="large">
-        A
-      </Avatar>
-      <Dropdown overlay={menu_user} placement="bottomLeft" arrow>
-        <Button className="Navbar__button">Administrador</Button>
-        </Dropdown>
-      </div>
-
-        </>
+      </>
     )
 }
 
