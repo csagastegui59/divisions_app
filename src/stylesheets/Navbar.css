@@ -1,0 +1,28 @@
+.Navbar {
+  display: flex;
+  justify-content: space-around; 
+}
+
+.Navbar__logo {
+  color: #FFFFFF;
+}
+
+.Navbar__button {
+  font-family: 'Segoe UI';
+  display:flex;
+  background-color: red;
+  border: none;
+  color: #FFFFFF;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  margin-top: 12.5px;
+  width: 104px;
+  height: 40px;
+  padding: 0px;
+}
+
+.text{
+  color: #FFFFFF;
+}
