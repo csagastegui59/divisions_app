@@ -57,9 +57,27 @@
   border: none;
   display: flex;
   align-items: center;
-  font-family: Segoe UI;
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'Segoe UI';
   font-size: 20px;
-  line-height: 19px;
+}
+
+.download-button{
+  color: #1890FF;
+}
+
+.upload-button{
+  color: #1890FF;
+}
+
+.add-button{
+  color: #1890FF;
+}
+
+.List {
+  display: flex;
+
+}
+
+.ant-btn-icon-only > * {
+    font-size: 30px;
 }

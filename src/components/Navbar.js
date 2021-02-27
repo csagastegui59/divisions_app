@@ -1,5 +1,6 @@
 import React from "react";
 import "./../stylesheets/Navbar.css";
+import "./../stylesheets/List.css";
 import { Menu, Dropdown, Button, Avatar, Badge } from 'antd';
 import { QuestionCircleOutlined, BellFilled, InboxOutlined, DownOutlined } from '@ant-design/icons';
 
@@ -45,6 +46,7 @@ const menu_user = (
     </Menu.Item>
   </Menu>
 );
+
   function Navbar(){
     return(
       <>
