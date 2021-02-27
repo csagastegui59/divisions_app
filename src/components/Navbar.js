@@ -1,7 +1,6 @@
 import React from "react";
 import "./../stylesheets/Navbar.css";
-import { Menu, Dropdown, Button, Avatar } from 'antd';
-import { Badge } from 'antd';
+import { Menu, Dropdown, Button, Avatar, Badge } from 'antd';
 import { QuestionCircleOutlined, BellFilled, InboxOutlined, DownOutlined } from '@ant-design/icons';
 
  const menu_models = (
@@ -50,30 +49,34 @@ const menu_user = (
     return(
       <>
         <div className="Navbar">
-          <div className="Navbar__logo">
-            <p className="logo">mandü</p>
+          <div className="rectangle">
+            <img src="../assets/mandu.png"/>
           </div>
-          <Button className="Navbar__button">Dashboard</Button>
-          <Button className="Navbar__button">Organización</Button>
+          <div className="Navbar__logo">
+          </div>
+          <Button >Dashboard</Button>
+          <Button >Organización</Button>
           <Dropdown.Button overlay={menu_models} placement="bottomCenter" icon={<DownOutlined /> }>
             Modelos
           </Dropdown.Button>
           <Dropdown.Button overlay={menu_feedback} placement="bottomCenter" icon={<DownOutlined /> }>
             Seguimiento
           </Dropdown.Button>
-          <InboxOutlined />
-          <QuestionCircleOutlined />
-          <a href="#">
-            <Badge count={1}>
-              <BellFilled />
-            </Badge>
-          </a>,
-          <Avatar style={{ backgroundColor: 'red', verticalAlign: 'middle' }} size="large">
-            A
-          </Avatar>
-          <Dropdown.Button overlay={menu_user} placement="bottomCenter" icon={<DownOutlined /> }>
-            Administrador
-          </Dropdown.Button>
+          <div className="icons">
+            <InboxOutlined className="icon--color icon" />
+            <QuestionCircleOutlined className="icon--color icon" />
+              <Badge count={1}>
+                <BellFilled className="icon--color icon" />
+              </Badge>
+          </div>
+          <div className="Admin">
+            <Avatar style={{ backgroundColor: 'red', verticalAlign: 'middle' }} size="large">
+              A
+            </Avatar>
+            <Dropdown.Button overlay={menu_user} placement="bottomCenter" icon={<DownOutlined /> }>
+              Administrador
+            </Dropdown.Button>
+          </div>
         </div>
       </>
     )

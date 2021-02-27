@@ -10,7 +10,7 @@ function App() {
       <Header className="Header">
         <Navbar />
       </Header>
-      <Content>main content</Content>
+      
     </Layout>
   );
 }
