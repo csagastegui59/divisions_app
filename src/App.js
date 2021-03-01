@@ -5,7 +5,7 @@ import TableView from './components/Table.js';
 import List from './components/List.js';
 import "./stylesheets/App.css";
 
-const { Header, Content } = Layout
+const { Header } = Layout
 function App() {
   return (
     <Layout>

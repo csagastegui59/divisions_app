@@ -1,34 +1,37 @@
+img{
+  width: 100px;
+  height: 24px;
+}
+
+.black-logo{
+  height: 35px;
+}
+.white-logo{
+  height: 35px;
+}
+
 .Navbar {
+  display: grid;
+  grid-template-columns: 40% 32% 28%;
+  grid-template-rows: 15% 70% 15%;
+  height: 54px;
+  width: 100%;
+}
+.first-grid{
+  grid-column-start: 1;
+  grid-row: 2;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: 54px;
 }
 
-.Navbar__logo {
-  color: #FFFFFF;
-}
-
-.Navbar__button {
-  font-family: 'Segoe UI';
-  display:flex;
-  border: none;
-  color: #FFFFFF;
-  font-size: 14px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5%;
-  margin-top: 12.5px;
-  width: 104px;
-  height: 40px;
-  padding: 0px;
+.second-grid{
+  grid-column-start: 3;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-around;
 }
 
 .text{
-  color: #FFFFFF;
-}
-
-.icon--color {
   color: #FFFFFF;
 }
 
@@ -37,10 +40,9 @@
   justify-content: space-between;
   align-items: center;
   width: 120px;
-  height: 50px;
 }
 
-.icon {
+.icon--size {
   font-size: 20px;
 }
 
@@ -50,6 +52,36 @@
      background: #FFFFFF;
      border-radius: 5%;
 }
+/*cambiar los colores de los íconos*/
+
+.icon--color {
+  color: #FFFFFF;
+}
+
+.download-button{
+  color: #1890FF !important;
+}
+
+.upload-button{
+  color: #1890FF !important;
+}
+
+.add-button{
+  color: #1890FF !important;
+}
+/*cambiar los colores de los íconos*/
+
+.List {
+  display: flex;
+}
+
+/* Estilos para sobreescribir los que vienen por defecto en Ant Design en el elemento Header*/
+.ant-layout-header {
+  height: auto;
+  padding: 0px;
+  line-height: 0px;
+}
+/* Estilos para sobreescribir los que vienen por defecto en Ant Design en el elemento Button*/
 
 .ant-btn {
   background-color: transparent !important;
@@ -61,23 +93,6 @@
   font-size: 20px;
 }
 
-.download-button{
-  color: #1890FF;
-}
-
-.upload-button{
-  color: #1890FF;
-}
-
-.add-button{
-  color: #1890FF;
-}
-
-.List {
-  display: flex;
-
-}
-
 .ant-btn-icon-only > * {
-    font-size: 30px;
+  font-size: 30px;
 }
