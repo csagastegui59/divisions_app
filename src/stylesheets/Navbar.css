@@ -1,6 +1,6 @@
 .Navbar {
   display: grid;
-  grid-template-columns: 40% 32% 28%;
+  grid-template-columns: 40% 25% 35%;
   grid-template-rows: 15% 70% 15%;
   height: 54px;
   width: 100%;
@@ -34,6 +34,13 @@ img{
 
 .text{
   color: #FFFFFF;
+}
+
+.Admin{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
 }
 
 .icons {

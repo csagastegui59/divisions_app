@@ -10,12 +10,12 @@ import { QuestionCircleOutlined, BellFilled, InboxOutlined, DownOutlined } from 
   <Menu>
     <Menu.Item>
       <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/%22%3E">
-        1st menu item
+        Divisions
       </a>
     </Menu.Item>
     <Menu.Item>
       <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/%22%3E">
-        2nd menu item
+        Clients
       </a>
     </Menu.Item>
   </Menu>
@@ -48,13 +48,15 @@ import { QuestionCircleOutlined, BellFilled, InboxOutlined, DownOutlined } from 
                   <BellFilled className="icon--color icon--size" />
                 </Badge>
             </div>
-            <div>
+            <div className="Admin">
               <Avatar style={{ backgroundImage: {image}, verticalAlign: 'middle' }} size="large">
                 A
               </Avatar>
-              <Dropdown.Button overlay={menu} placement="bottomCenter" icon={<DownOutlined /> }>
-                Administrador
-              </Dropdown.Button>   
+              <Dropdown overlay={menu}>
+              <Button placement="bottomCenter">
+                Administrador <DownOutlined />
+              </Button> 
+              </Dropdown>  
               <img src={blackLogo} alt="logo" className="black-logo"/>
             </div>
           </div>
