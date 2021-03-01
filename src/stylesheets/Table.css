@@ -1,0 +1,13 @@
+.total-function{
+  color: #979797;
+  margin-left: 30px;
+}
+
+.table{
+  padding: 0px 30px;
+}
+
+.table-columns-subdivisions{
+  display: flex;
+  height: 8px;
+}

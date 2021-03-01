@@ -1,6 +1,5 @@
 import React from "react";
 import "./../stylesheets/Navbar.css";
-import "./../stylesheets/List.css";
 import whiteLogo from "../assets/white_logo.svg";
 import blackLogo from "../assets/mandu_black.svg";
 import image from  "../assets/image3.png";
@@ -26,35 +25,39 @@ import { QuestionCircleOutlined, BellFilled, InboxOutlined, DownOutlined } from 
     return(
       <>
         <div className="Navbar">
-        <div className="first-grid">    
-          <img src={whiteLogo} alt="logo" className="white-logo"/>
-          <Button >Dashboard</Button>
-          <Button >Organización</Button>
-          <Dropdown.Button overlay={menu} placement="bottomCenter" icon={<DownOutlined /> }>
-            Modelos
-          </Dropdown.Button>
-          <Dropdown.Button overlay={menu} placement="bottomCenter" icon={<DownOutlined /> }>
-            Seguimiento
-          </Dropdown.Button>
-</div>
-<div className="second-grid">
-          <div className="icons">
-            <InboxOutlined className="icon--color icon--size" />
-            <QuestionCircleOutlined className="icon--color icon--size" />
-              <Badge count={1}>
-                <BellFilled className="icon--color icon--size" />
-              </Badge>
+          <div className="first-grid">    
+            <img src={whiteLogo} alt="logo" className="white-logo"/>
+            <Button >Dashboard</Button>
+            <Button >Organización</Button>
+            <Dropdown overlay={menu}>
+            <Button placement="bottomCenter">
+              Modelos <DownOutlined />
+            </Button>
+            </Dropdown>
+            <Dropdown overlay={menu}>
+            <Button placement="bottomCenter">
+              Modelos <DownOutlined />
+            </Button>
+            </Dropdown>
           </div>
-          <div>
-            <Avatar style={{ backgroundImage: {image}, verticalAlign: 'middle' }} size="large">
-              A
-            </Avatar>
-            <Dropdown.Button overlay={menu} placement="bottomCenter" icon={<DownOutlined /> }>
-              Administrador
-            </Dropdown.Button>   
-            <img src={blackLogo} alt="logo" className="black-logo"/>
+          <div className="second-grid">
+            <div className="icons">
+              <InboxOutlined className="icon--color icon--size" />
+              <QuestionCircleOutlined className="icon--color icon--size" />
+                <Badge count={3}>
+                  <BellFilled className="icon--color icon--size" />
+                </Badge>
+            </div>
+            <div>
+              <Avatar style={{ backgroundImage: {image}, verticalAlign: 'middle' }} size="large">
+                A
+              </Avatar>
+              <Dropdown.Button overlay={menu} placement="bottomCenter" icon={<DownOutlined /> }>
+                Administrador
+              </Dropdown.Button>   
+              <img src={blackLogo} alt="logo" className="black-logo"/>
+            </div>
           </div>
-</div>
         </div>
       </>
     )
