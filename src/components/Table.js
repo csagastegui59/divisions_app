@@ -14,7 +14,6 @@ function totalColaboradores(){
   </span>)
 }
 
-const plusCircle = <PlusCircleFilled />
 function TableView() {
   const [state, setState] = useState({
     filteredInfo: null,
